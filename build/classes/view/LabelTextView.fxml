@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane prefHeight="52.0" prefWidth="766.0" style="-fx-background-color: #b9aaa6;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="textTitleCoding" fill="WHITE" layoutX="320.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coding">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.8563049853372434" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="460.0" prefWidth="764.0">
+               <children>
+                  <ComboBox fx:id="comboCodigo" layoutX="344.0" layoutY="382.0" prefHeight="25.0" prefWidth="183.0" promptText="Seleccionar Codigo" />
+                  <TextField fx:id="textFieldWord" editable="false" layoutX="25.0" layoutY="382.0" onContextMenuRequested="#setOnMenu" prefHeight="25.0" prefWidth="281.0" />
+                  <Button fx:id="btnAddCodigo" disable="true" layoutX="568.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#clickAddCode" prefHeight="25.0" prefWidth="151.0" text="Agregar código" />
+                  <Label fx:id="LabelPalabraSeleccionada" layoutX="24.0" layoutY="358.0" prefHeight="17.0" prefWidth="291.0" text="Palabra o frase seleccionada:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelSeleccionarCodigo" layoutX="344.0" layoutY="358.0" prefHeight="17.0" prefWidth="177.0" text="Seleccionar código:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+              <AnchorPane layoutX="116.0" layoutY="-26.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  <TabPane fx:id="TabPaneCod" layoutX="5.0" layoutY="5.0" prefHeight="343.0" prefWidth="753.0" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="textTabTexto" text="Texto">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="344.0">
+                                 <children>
+                                    <TableView fx:id="tableViewCod" layoutX="4.0" layoutY="3.0" onContextMenuRequested="#contextMenu" onMouseClicked="#clickedSelectedText" prefHeight="305.0" prefWidth="565.0">
+                                      <columns>
+                                        <TableColumn fx:id="tableColumnMinuto" prefWidth="32.0" text="#" />
+                                        <TableColumn fx:id="tableColumnTexto" prefWidth="709.0" text="Texto" />
+                                      </columns>
+                                    </TableView>
+                                    <ListView fx:id="listViewDocs" layoutX="576.0" layoutY="3.0" prefHeight="273.0" prefWidth="169.0" />
+                                    <Button fx:id="btnUploadDoc" disable="true" layoutX="576.0" layoutY="282.0" mnemonicParsing="false" onAction="#uploadDocOnTexto" prefHeight="25.0" prefWidth="81.0" text="Cargar" />
+                                    <Button fx:id="btnSave" disable="true" layoutX="666.0" layoutY="282.0" mnemonicParsing="false" onAction="#saveFile" prefHeight="25.0" prefWidth="79.0" text="Guardar" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="textTabCodigo" text="Código">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="751.0">
+                                 <children>
+                                    <Pane layoutX="533.0" layoutY="6.0" prefHeight="167.0" prefWidth="208.0" style="-fx-border-color: black;">
+                                       <children>
+                                          <TextField fx:id="textFieldNameCode" layoutX="10.0" layoutY="25.0" prefHeight="25.0" prefWidth="177.0" promptText="Nombre del codigo" />
+                                          <Button fx:id="btnCreatedCod" disable="true" layoutX="12.0" layoutY="122.0" mnemonicParsing="false" onMouseClicked="#createdCoide" prefHeight="25.0" prefWidth="179.0" text="Crear código" />
+                                          <Label fx:id="LabelCrearCodigo" layoutX="10.0" layoutY="8.0" prefHeight="17.0" prefWidth="146.0" text="Crear código:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="LabelSeleccionarcolor" layoutX="12.0" layoutY="63.0" prefHeight="17.0" prefWidth="170.0" text="Seleccionar color código:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ColorPicker fx:id="colorPicker" layoutX="10.0" layoutY="81.0" prefHeight="25.0" prefWidth="176.0" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="534.0" layoutY="180.0" prefHeight="128.0" prefWidth="208.0" style="-fx-border-color: black;">
+                                       <children>
+                                          <Button fx:id="btnDeleteCode" disable="true" layoutX="12.0" layoutY="94.0" mnemonicParsing="false" onMouseClicked="#deleteCode" prefHeight="25.0" prefWidth="179.0" text="Eliminar código" />
+                                          <Label fx:id="LabelEliminarCodigo" layoutX="10.0" layoutY="20.0" prefHeight="17.0" prefWidth="163.0" text="Eliminar código:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboDeleteCode" layoutX="10.0" layoutY="46.0" prefHeight="25.0" prefWidth="178.0" promptText="Seleccionar Codigo" />
+                                       </children>
+                                    </Pane>
+                                    <TableView fx:id="tableViewCoding" layoutX="7.0" layoutY="6.0" prefHeight="301.0" prefWidth="521.0">
+                                      <columns>
+                                        <TableColumn fx:id="idColumn" prefWidth="30.0" text="ID" />
+                                        <TableColumn fx:id="idSubColumn" prefWidth="53.0" text="ID_Sub" />
+                                          <TableColumn fx:id="nameCodeColumn" prefWidth="124.0" text="Nombre Codigo" />
+                                          <TableColumn fx:id="colorColumn" prefWidth="93.0" text="Color" />
+                                          <TableColumn fx:id="documentColumn" prefWidth="75.0" text="Documento" />
+                                          <TableColumn fx:id="wordColumn" prefWidth="145.0" text="Palabra o frase" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="764.0">
+               <children>
+                  <Button fx:id="btnClose" layoutX="673.0" layoutY="16.0" mnemonicParsing="false" onAction="#close" prefHeight="10.0" prefWidth="70.0" text="Cerrar" />
+                  <Label fx:id="labelCoding" layoutX="14.0" layoutY="20.0" prefHeight="17.0" prefWidth="536.0" textFill="#f80000" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label" layoutX="330.0" layoutY="20.0" prefHeight="32.0" prefWidth="173.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

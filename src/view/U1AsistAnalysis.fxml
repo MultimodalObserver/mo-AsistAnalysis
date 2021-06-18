@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane prefHeight="105.0" prefWidth="454.0" style="-fx-background-color: #b9aaa6;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="textTittle" fill="WHITE" layoutX="80.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Analysis assistant&gt; Documentos">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <SplitPane cache="true" orientation="VERTICAL" prefHeight="297.0" prefWidth="454.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="btnSelectDocuments" layoutX="155.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#selectDocuments" prefHeight="25.0" prefWidth="110.0" text="Agregar archivos" />
+                  <Button fx:id="btnRemoveDocuments" layoutX="26.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#removeDocuments" prefHeight="25.0" prefWidth="100.0" text="Remover" />
+                  <Button fx:id="btnRemoveAll" layoutX="335.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#removeAllDocuments" prefHeight="25.0" prefWidth="100.0" text="Remover todos" />
+                  <ListView fx:id="listDocuments" layoutX="25.0" layoutY="176.0" prefHeight="69.0" prefWidth="411.0" />
+                  <Text fx:id="textCargarArchivos" layoutX="26.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargar archivos">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="-7.0" layoutY="137.0" prefHeight="12.0" prefWidth="468.0" />
+                  <Text fx:id="textProyecto" layoutX="26.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proyectos">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="ListViewProyecto" layoutX="25.0" layoutY="19.0" onMouseClicked="#itemClicked" prefHeight="88.0" prefWidth="181.0" />
+                  <Text fx:id="textCargarArchivos11" layoutX="238.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Archivos de proyecto">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="ListViewArchivosProyecto" layoutX="233.0" layoutY="19.0" prefHeight="88.0" prefWidth="207.0" />
+                  <Button fx:id="btnAgregarArchivos" layoutX="339.0" layoutY="112.0" mnemonicParsing="false" onMouseClicked="#addDocuments" prefHeight="25.0" prefWidth="100.0" text="Agregar" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

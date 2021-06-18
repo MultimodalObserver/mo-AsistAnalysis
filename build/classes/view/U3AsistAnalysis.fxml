@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="11.0" layoutY="116.0" prefHeight="564.0" prefWidth="204.0" style="-fx-border-color: black;">
+         <children>
+            <Text fx:id="textDocumentosDisponibles" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Documentos disponibles">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnAddDocuments" layoutX="13.0" layoutY="525.0" mnemonicParsing="false" onMouseClicked="#clickBtnAddDocuments" prefHeight="25.0" prefWidth="175.0" text="Agregar documentos" />
+            <ListView fx:id="listViewDocs" layoutX="13.0" layoutY="39.0" prefHeight="476.0" prefWidth="175.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="11.0" layoutY="33.0" prefHeight="75.0" prefWidth="1381.0" style="-fx-border-color: black; -fx-background-color: #816f67; -fx-border-color: black;">
+         <children>
+            <Button fx:id="btnEtiquetado" layoutX="149.0" mnemonicParsing="false" onMouseClicked="#etiquetadoAnalisis" prefHeight="75.0" prefWidth="149.0" style="-fx-background-color: transparent; -fx-text-fill: #ffffff; -fx-border-color: black;" text="Codificación" />
+            <Button fx:id="btnNube" layoutX="298.0" mnemonicParsing="false" onMouseClicked="#nubepalabrasAnalisis" prefHeight="75.0" prefWidth="149.0" style="-fx-background-color: transparent; -fx-text-fill: #ffffff; -fx-border-color: black;" text="Nube de palabras" />
+            <Button fx:id="btnClose" mnemonicParsing="false" onMouseClicked="#cerrarVentana" prefHeight="75.0" prefWidth="149.0" style="-fx-background-color: transparent; -fx-text-fill: #ffffff; -fx-border-color: black;" text="Home" />
+         </children></Pane>
+      <BorderPane fx:id="borderPaneCambio" layoutX="224.0" layoutY="116.0" prefHeight="564.0" prefWidth="766.0" style="-fx-border-color: black;">
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="textEsteAsistente" layoutX="57.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Este asistente te permite realizar las siguientes tareas:" wrappingWidth="765.9791412353516">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textCod" layoutX="57.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codificación:" wrappingWidth="152.24413871765137">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textNube" layoutX="57.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nube de palabras:" wrappingWidth="152.24414491653442">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textDefinicionCod" layoutX="209.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permite administrar los datos mediante diferentes codigos y colores para que pueda ser diferencido en el texto, realizando una categorización de diferentes ideas." wrappingWidth="543.2441387176514">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textDefinicionNube" layoutX="209.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permite crear nube de palabras o tablas de frecuencias de diferentes documentos, dando la opción de elegir la longitud mínima de palabra que desea que aparezca." wrappingWidth="543.2441387176514">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textBienvenido" layoutX="292.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido" textAlignment="CENTER" wrappingWidth="179.0000081062317">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </center></BorderPane>
+      <Text fx:id="textTitle" layoutX="610.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Herramientas de análisis">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <BorderPane fx:id="borderPaneSearch" layoutX="999.0" layoutY="116.0" prefHeight="564.0" prefWidth="394.0" style="-fx-border-color: black;" />
+      <Label fx:id="labelDocs" layoutX="12.0" layoutY="682.0" prefHeight="17.0" prefWidth="1118.0" textFill="#fc0000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

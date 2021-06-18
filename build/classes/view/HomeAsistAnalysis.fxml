@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="57.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Este asistente te permite realizar las siguientes tareas:" wrappingWidth="765.9791412353516">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="57.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codificación:" wrappingWidth="152.24413871765137">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="57.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nube de palabras:" wrappingWidth="152.24414491653442">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="209.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permite administrar los datos mediante diferentes codigos y colores para que pueda ser diferencido en el texto, realizando una categorización de diferentes ideas." wrappingWidth="543.2441387176514">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="209.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permite crear nube de palabras o tablas de frecuencias de diferentes documentos, dando la opción de elegir la longitud mínima de palabra que desea que aparezca." wrappingWidth="543.2441387176514">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="292.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido" textAlignment="CENTER" wrappingWidth="179.0000081062317">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

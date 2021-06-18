@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane prefHeight="52.0" prefWidth="766.0" style="-fx-background-color: #b9aaa6;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="tittleCloudTags" fill="WHITE" layoutX="320.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cloud Tags">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="764.0">
+               <children>
+                  <Button layoutX="950.0" layoutY="14.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="70.0" text="Cerrar" />
+                  <Label fx:id="labelCloud" layoutX="14.0" layoutY="436.0" prefHeight="18.0" prefWidth="569.0" textFill="#f80000" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="893.0">
+                     <children>
+                        <Pane layoutX="14.0" layoutY="14.0" prefHeight="410.0" prefWidth="200.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField fx:id="textFieldUbicacion" editable="false" layoutX="12.0" layoutY="51.0" onMouseClicked="#selectDocuments" prefHeight="25.0" prefWidth="167.0" promptText="Seleccionar archivo" />
+                              <Text fx:id="textCargarPalExcluidas" layoutX="20.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargar palabras excluidas (*)">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textformato" layoutX="12.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(*) Formato archivo:  Palabra1 Palabra2" wrappingWidth="98.728515625">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textModo" layoutX="14.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modo visualización:" wrappingWidth="166.84375">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="btnGenerate" disable="true" layoutX="15.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#clickGenerate" prefHeight="25.0" prefWidth="161.0" text="Generar " />
+                              <Text fx:id="textUbicaciondelArchivo" layoutX="15.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubicación del archivo:" textAlignment="CENTER" wrappingWidth="163.845703125" />
+                              <Text fx:id="textLongitu" layoutX="14.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Longitud mínima de palabra:" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Spinner fx:id="spinnerWord" layoutX="14.0" layoutY="277.0" prefHeight="25.0" prefWidth="161.0" />
+                              <RadioButton fx:id="radioCloud" layoutX="12.0" layoutY="197.0" mnemonicParsing="false" text="Nube de palabras">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="visualizationRadio" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="radioTable" layoutX="12.0" layoutY="223.0" mnemonicParsing="false" text="Tabla de frecuencias" toggleGroup="$visualizationRadio" />
+                              <Button fx:id="btnClear" layoutX="123.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#clearTextField" text="Limpiar" />
+                              <Pane layoutY="345.0" prefHeight="65.0" prefWidth="200.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <Button fx:id="btnGuardar" layoutX="15.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#clickSave" prefHeight="25.0" prefWidth="161.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="226.0" layoutY="14.0" prefHeight="409.0" prefWidth="798.0" style="-fx-border-color: black;">
+                           <children>
+                              <TabPane fx:id="tabPane" layoutX="3.0" layoutY="3.0" onMousePressed="#onMousePressed" prefHeight="403.0" prefWidth="790.0" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab fx:id="tabTable" text="Frequency Table ">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tableView" layoutX="2.0" layoutY="3.0" prefHeight="369.0" prefWidth="786.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="wordColumn" prefWidth="267.0" text="Word" />
+                                                      <TableColumn fx:id="lengthColumn" prefWidth="234.0" text="Length" />
+                                                      <TableColumn fx:id="frequencyColum" prefWidth="284.0" text="Frequency" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="tabCloud" text="Cloud Tags">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="scrollPane" layoutX="3.0" layoutY="4.0" prefHeight="367.0" prefWidth="784.0">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
