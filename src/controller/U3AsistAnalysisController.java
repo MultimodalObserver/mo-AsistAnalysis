@@ -743,7 +743,7 @@ public class U3AsistAnalysisController implements Initializable {
 
         Class noparams[] = {};
         Method method;
-            
+                 
         try {
             URL jarUrl = new URL("file:///"+ codingPlugin.getPath());//Permite cargar el .jar
             URLClassLoader loader = new URLClassLoader(new URL[]{jarUrl});//
